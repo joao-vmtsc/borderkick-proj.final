@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cadastro de torcedor — BorderKick</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/extra.css">
+</head>
+<body data-page="cadastro">
+<header class="topbar" id="topo"></header>
+<main class="form-page">
+  <section class="form-photo">
+    <span class="eyebrow">TORCEDOR, PREPARE-SE</span>
+    <h1>O mundo inteiro pode ser sua <span class="lime">arquibancada.</span></h1>
+    <p>Cadastre seus dados para começar a planejar sua viagem.</p>
+  </section>
+  <section class="form-card">
+    <div class="steps" id="steps">
+      <div class="step active">1 Dados pessoais</div>
+      <div class="step">2 Documentos</div>
+      <div class="step">3 Confirmação</div>
+    </div>
+    <form class="demo-form" id="f">
+      <div class="passo">
+        <h2>Cadastro de torcedor</h2>
+        <p class="muted">Preencha os campos para iniciar seu cadastro.</p>
+        <div class="input-grid">
+          <div class="field full"><label for="nome">Nome completo *</label><input id="nome" name="nome" required minlength="3" maxlength="160" autocomplete="name" placeholder="Nome e sobrenome"></div>
+          <div class="field"><label for="cpf">CPF *</label><input id="cpf" name="cpf" required inputmode="numeric" maxlength="14" placeholder="000.000.000-00"></div>
+          <div class="field"><label for="email">E-mail *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></div>
+          <div class="field"><label for="telefone">Telefone *</label><input id="telefone" name="telefone" required inputmode="tel" maxlength="15" placeholder="(81) 99999-9999"></div>
+          <div class="field"><label for="nascimento">Data de nascimento *</label><input id="nascimento" name="nascimento" type="date" required></div>
+          <div class="field"><label for="pais">País de origem *</label><select id="pais" name="pais" required><option value="">Selecione</option><option>Brasil</option><option>Argentina</option><option>Outro</option></select></div>
+          <div class="field"><label for="senha">Senha * (mín. 8 caracteres)</label><input id="senha" name="senha" type="password" required minlength="8" autocomplete="new-password"></div>
+        </div>
+        <button type="button" class="btn btn-lime btn-block" data-prox>Continuar cadastro →</button>
+      </div>
+
+      <div class="passo" hidden>
+        <h2>Documentos</h2>
+        <p class="muted">PDF, JPG ou PNG, até 5 MB por arquivo.</p>
+        <div class="input-grid">
+          <div class="field"><label for="tipo_documento">Tipo de documento</label><select id="tipo_documento" name="tipo_documento"><option value="identidade">RG / CNH</option><option value="passaporte">Passaporte</option></select></div>
+          <div class="field"><label for="documento">Documento de identificação *</label><input id="documento" name="documento" type="file" accept=".pdf,.jpg,.jpeg,.png" required></div>
+          <div class="field full"><label for="visto">Visto americano (obrigatório para jogos nos EUA)</label><input id="visto" name="visto" type="file" accept=".pdf,.jpg,.jpeg,.png"></div>
+        </div>
+        <p class="muted nota">Ao enviar o visto, o status fica "Em análise" até um atendente validar.</p>
+        <div class="form-inline"><button type="button" class="btn btn-ghost" data-volta>← Voltar</button><button type="button" class="btn btn-lime" data-prox>Continuar →</button></div>
+      </div>
+
+      <div class="passo" hidden>
+        <h2>Confirmação</h2>
+        <p class="muted">Confira os dados antes de finalizar.</p>
+        <dl class="resumo" id="resumo"></dl>
+        <label class="check-label terms"><input type="checkbox" name="termos" value="true" required> Li e aceito os termos de uso e a política de privacidade.</label>
+        <p class="alert alert-erro" id="aviso" role="alert" hidden></p>
+        <div class="form-inline"><button type="button" class="btn btn-ghost" data-volta>← Voltar</button><button class="btn btn-lime" type="submit">Finalizar cadastro →</button></div>
+      </div>
+    </form>
+    <p class="form-foot">Já tem conta? <a class="text-link" href="login.html">Entrar</a></p>
+  </section>
+</main>
+<script src="js/script.js"></script>
+</body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Validação de fronteiras — BorderKick</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/extra.css">
+</head>
+<body class="admin-body" data-page="validacao">
+<aside class="sidebar">
+  <a class="brand" href="index.html"><span class="brand-mark">BK</span>BorderKick</a>
+  <nav>
+    <a class="active" href="validacao.html">Validação de fronteiras</a>
+    <a href="pacote.html">Pacotes</a>
+    <a href="index.html">Site público</a>
+    <a href="#" id="sair">Sair</a>
+  </nav>
+  <div class="sidebar-bottom">Painel interno · atendentes</div>
+</aside>
+<main class="admin-main">
+  <div class="admin-top">
+    <div><h1>Validação de fronteiras</h1><p class="muted">Confira o visto americano e libere ou bloqueie vendas com jogo nos EUA.</p></div>
+    <div class="admin-avatar" id="avatar">A</div>
+  </div>
+  <div class="stats-grid" id="stats"></div>
+  <div class="table-card">
+    <div class="table-tools">
+      <input id="q" type="search" placeholder="Buscar por nome ou e-mail" aria-label="Buscar torcedor">
+      <select id="filtro" aria-label="Filtrar por status"><option value="">Todos os status</option><option>Pendente</option><option>Em análise</option><option>Aprovado e Validado</option><option>Rejeitado</option></select>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Torcedor</th><th>E-mail</th><th>País</th><th>Docs</th><th>Visto americano</th><th></th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table></div>
+  </div>
+  <div class="table-card detalhe" id="detalhe" hidden></div>
+  <div class="table-card" style="margin-top:24px"><h3 style="margin-top:0">Últimos eventos</h3><ul class="audit" id="audit"></ul></div>
+</main>
+<script src="js/script.js"></script>
+</body></html>

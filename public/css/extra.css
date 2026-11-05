@@ -1,0 +1,54 @@
+/* Complementos do sistema. NAO altera o style.css original: usa as mesmas cores/variaveis. */
+[hidden]{display:none!important}
+.alert{margin:6px 0;padding:11px 14px;border-radius:7px;font-size:12px;font-weight:600;line-height:1.45}
+.alert-erro{color:#ff8b91;background:#ff53601b;border:1px solid #ff53603a}
+.alert-ok{color:#c8ff78;background:#a9ee421c;border:1px solid #a9ee4240}
+.alert-aviso{color:#ffdf70;background:#ffcc331b;border:1px solid #ffcc333a}
+.alert a{text-decoration:underline}
+#banner{margin-bottom:26px}
+.country-pills span{cursor:pointer;transition:border-color .18s,color .18s}
+.country-pills span:hover,.country-pills span.on{border-color:var(--lime);color:var(--lime)}
+.package-meta .pais-tag{color:var(--lime);font-weight:700}
+.extras{border:0;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.extras legend{font-size:11px;color:var(--muted);margin-bottom:6px;padding:0}
+.extras label{display:flex;gap:8px;align-items:center;font-size:12px;color:#d7e0eb}
+.extras input{accent-color:var(--lime)}
+.package-card .btn{margin-top:4px}
+.package-card .alert{margin-top:12px}
+.selo-visto{color:#ffdf70;font-size:11px;font-weight:700;margin:6px 0 0}
+.resumo{display:grid;grid-template-columns:max-content 1fr;gap:8px 18px;margin:0 0 18px;font-size:13px}
+.resumo dt{color:var(--muted)}.resumo dd{margin:0;word-break:break-word}
+.nota{font-size:12px;margin:14px 0 4px}
+select option{background:#081a30;color:#fff}
+.stat-card.ok strong{color:var(--lime)}
+.table-card.detalhe{margin-top:24px}
+.table-card.detalhe h2{margin:0 0 4px;font-size:22px}
+.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:18px}
+.det-grid h3{font-size:14px;margin:0 0 8px}
+.det-grid ul{margin:0 0 16px;padding-left:18px;font-size:13px;color:#d7e0eb}
+.det-grid a{color:var(--lime)}
+.detalhe textarea{width:100%;min-height:80px;background:#081a30;border:1px solid #2b4564;border-radius:7px;padding:12px;color:#fff;font:inherit;outline:none}
+.detalhe textarea:focus,.detalhe select:focus{border-color:var(--lime)}
+.detalhe select{width:100%;background:#081a30;border:1px solid #2b4564;border-radius:7px;padding:12px 13px;color:#fff}
+.detalhe .field{margin-bottom:12px}
+.audit{list-style:none;margin:0;padding:0;font-size:12px;color:var(--muted);display:grid;gap:6px}
+.audit b{color:#d7e0eb}
+tbody tr.sel{background:#b9f34a0d}
+.lista-vouchers{display:grid;gap:12px;text-align:left;margin-top:20px}
+.lista-vouchers a{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--panel);border:1px solid #1d3857;border-radius:12px;padding:16px 20px}
+.lista-vouchers a:hover{border-color:var(--lime)}
+.voucher .match-bloco+.match-bloco{border-top:1px solid #d4dee8}
+.voucher-susp{background:#ffe5e7;color:#8f1424;border:1px solid #f3b4bc;border-radius:10px;padding:14px 16px;font-weight:600;font-size:13px;margin:0 0 20px}
+.voucher-page .acoes{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.nav-mobile-only{display:none}
+@media(max-width:620px){.topbar.menu-open .nav-mobile-only{display:block}.det-grid{grid-template-columns:1fr}.resumo{grid-template-columns:1fr}}
+@media print{.acoes,.alert{display:none!important}}
+/* selos legíveis sobre o fundo claro do voucher */
+.voucher .status.approved{color:#14602a;background:#d4f1d9}
+.voucher .status.rejected{color:#8f1424;background:#fbd9dd}
+.passo>.muted{font-size:12px;margin:0 0 24px}
+.passo .nota{margin:16px 0 6px}
+.passo>.form-inline{margin-top:14px}
+.package-info p.alert{min-height:0;font-size:12px}
+.package-info p.alert-erro{color:#ff8b91}
+.package-info p.alert-ok{color:#c8ff78}
