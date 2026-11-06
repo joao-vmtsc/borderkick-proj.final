@@ -1,6 +1,6 @@
 # BorderKick — Logística de Fronteiras para Torcedores (Copa 2026)
 
-Node.js + Express + **MySQL**. O mesmo servidor entrega as páginas (`public/`, com o **style.css original intacto**) e a API (`/api`).
+Node.js + Express + **MySQL**. O mesmo servidor entrega as páginas (`public/`) e a API (`/api`).
 
 ## 1. Rodar no seu computador
 Requisitos: Node 18+ e MySQL (ou MariaDB/XAMPP) ligado.
@@ -51,20 +51,14 @@ erDiagram
 3. **Voucher:** ao abrir, a regra é conferida de novo; visto revogado depois → voucher **suspenso**, sem código.
 Também: só atendente altera o visto; aprovar exige o documento do visto enviado; reenviar visto volta para "Em análise"; rejeitar exige motivo.
 
-## 4. Roteiro de demonstração (5 min)
-1. Cadastre um torcedor **sem** visto → Pacotes → "Nova York + jogo": **bloqueado**. "Toronto + jogo": **emite**.
-2. Cadastre outro **com** visto anexado → entre como atendente → Validação → Revisar → "Aprovado e Validado".
-3. Como esse torcedor, emita "Fronteira Dupla: México + Nova York" → voucher com código.
-4. Atendente muda o visto para "Rejeitado" (com motivo) → abra o voucher: **suspenso**.
-
-## 5. Hospedagem gratuita
+## 4. Hospedagem gratuita
 O site precisa de um servidor Node **e** de um MySQL; o GitHub Pages sozinho não serve (só arquivos estáticos).
 - **Aplicação:** Render (plano Free) — repositório GitHub → New Web Service → Build `npm install`, Start `npm start`.
 - **MySQL grátis:** Aiven (plano Free: 1 GB, 1 vCPU, sem cartão; pode desligar por inatividade, e você religa no painel). Crie o serviço MySQL e copie host, porta, usuário, senha.
 - **Variáveis no Render:** `NODE_ENV=production`, `NODE_VERSION=20`, `JWT_SECRET`, `ATENDENTE_EMAIL`, `ATENDENTE_SENHA`, `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` (ex.: `defaultdb`, o banco que o Aiven já cria) e `DB_SSL=true`.
 - Limites: o disco do Render Free é temporário → **arquivos enviados (documentos) somem a cada reinício** (os registros no MySQL permanecem). Para a apresentação, faça o cadastro de teste pouco antes. O app dorme após ~15 min parado (1º acesso ~50 s).
 
-## 6. Apresentação na máquina local (recomendado)
+## 5. Apresentação na máquina local
 Instale Node + MySQL (+ Workbench) na máquina da apresentação **com antecedência**, extraia o zip, crie o `.env`, rode `npm install` e `npm start`.
 Para mostrar o banco ao vivo, abra `database/demo_consultas.sql` no Workbench e rode as consultas uma a uma
 (torcedores, dados atômicos, pacotes, vouchers, auditoria e o teste da trigger que bloqueia a venda direto no banco).
